@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <form (submit)="updateProduct()">
+    <input type="text" name="editProduct.title" [(ngModel)]='editProduct.title'>
+    <input type="number" name="editProduct.price" [(ngModel)]='editProduct.price'>
+    <input type="text" name="editProduct.url" [(ngModel)]='editProduct.url'>
+    <button [routerLink]="['/all']">CANCEL</button>
+    <input type="submit" value="UPDATE">
+  </form>
+  <div *ngFor="let error of errors">
+    <p style="color: red;">{{ error.message }}</p>
+  </div>
+</div>
